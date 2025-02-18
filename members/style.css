@@ -1,14 +1,16 @@
 @import url(/fonts/forza.css);
 
-*{
+* {
     margin: 0;
 }
 
-body{
-background-color: rgb(32, 32, 32);
+body {
+    background-color: rgb(32, 32, 32);
+    font-family: 'forzamedium';
+    color: white;
 }
 
-header{
+header {
     background: black;
     background-image: url(/imgs/bg.jpg);
     background-repeat: no-repeat;
@@ -16,13 +18,12 @@ header{
     background-position: center;
     color: white;
     padding: 2em;
-    font-family: 'forzamedium';
     display: flex;
     align-items: center;
     border-bottom: 7px solid #FF5000;
 }
 
-a{
+a {
     padding-left: 10px;
     padding-right: 10px;
     font-size: larger;
@@ -30,14 +31,14 @@ a{
     transition: ease-in-out 400ms;
 }
 
-header span{
+header span {
     padding-left: 10px;
     padding-right: 10px;
     font-size: larger;
     transition: ease-in-out 400ms;
 }
 
-header a{
+header a {
     padding-left: 10px;
     padding-right: 10px;
     font-size: larger;
@@ -46,7 +47,7 @@ header a{
     transition: ease-in-out 400ms;
 }
 
-header a:hover{
+header a:hover {
     background: #FF5000;
     border-radius: 6px;
     color: black;
@@ -57,108 +58,31 @@ header img:last-child {
     margin-left: auto;
 }
 
-.abtus{
-    font-family: 'forzamedium';
-    text-align: center;
-    color: white;
-}
-
-.about-us-text{
-    margin-top: 3em;
-}
-
-.abtus h3{
-    margin-top: 1em;
-    font-weight: 400;
-}
-
-.youtube{
-    font-family: 'forzamedium';
-    color: white;
-    text-align: center;
-    margin-top: 10em;
-    border:  3px solid rgb(62, 62, 62);
-    margin-left: 40em;
-    margin-right: 40em;
-padding-bottom: 6px;
-}
-
-.youtube h4:hover, .youtube a:hover{
-    color: #FF5000;
-}
-
-
-iframe{
-    margin-top: 1em;
-}
-
-.featured-members{
-    height: 100vh;
-    border-top: 3px solid #FF5000;
-    border-bottom: 3px dotted #FF5000;
-    background-image: url(/imgs/PLACEMENT-IMAGE.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center;
-    margin-top: 1em;
-    h1, p{
-        text-align: center;
-        font-family: 'forzamedium';
-        color: white;
-    }
-    h1{
-        margin-top: 2em;
-    }
-    p{
-        margin-top: 10px;
-    }
-}
-
-.users {
+.gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 20px;
+    justify-content: center;
     margin-top: 2em;
 }
 
-.user-profile {
-    flex: 1 1 calc(33.333% - 1em);
-    margin: 0.5em;
+.member, .vip {
     text-align: center;
-    color: white;
-    font-family: 'forzamedium';
 }
 
-.user-profile img {
+.member img, .vip img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
 }
 
-.user-profile a {
-    display: block;
-    color: #FF5000;
-    margin-top: 0.5em;
-    text-decoration: none;
+.member p, .vip p {
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 
-.user-profile a:hover {
-    text-decoration: underline;
-}
-
-.user-profile p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.user-profile p img {
-    margin-left: 5px;
-    width: 20px;
-    height: 20px;
-}
-
-footer{
+footer {
     text-align: center;
     font-family: 'forzamedium';
     color: white;
