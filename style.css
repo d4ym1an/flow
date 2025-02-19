@@ -11,7 +11,6 @@ body{
 
 header{
     background: black;
-    background-image: url(/imgs/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -56,8 +55,31 @@ header a:hover{
     cursor: pointer;
 }
 
+.logo:hover{
+    background: transparent;
+}
+
 header img:last-child {
     margin-left: auto;
+}
+
+.flow-text{
+    opacity: 0;
+    animation: fadeInDrop 2000ms ease-in-out forwards;
+    width: 50%; /* Make the image smaller */
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+} 
+
+@keyframes fadeInDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .abtus{

@@ -7,6 +7,7 @@
 body{
     background-color: rgb(5, 5, 5);
     font-size: 1em; /* Adjust base font size */
+    color: white;
 }
 
 header{
@@ -103,6 +104,13 @@ header img:last-child {
     border-radius: 0.375em;
     color: black;
     cursor: pointer;
+}
+
+.abtus{
+    font-family: 'forzamedium';
+    text-align: center;
+    margin-top: 5em;
+    font-size: larger;
 }
 
 @media (max-width: 425px) {
