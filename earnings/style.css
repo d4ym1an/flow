@@ -1,0 +1,123 @@
+@import url(/fonts/forza.css);
+
+*{
+    margin: 0;
+}
+
+body{
+    background-color: rgb(5, 5, 5);
+    font-size: 1em; /* Adjust base font size */
+}
+
+header{
+    background: black;
+    background-image: url(/imgs/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2em;
+    font-family: 'forzamedium';
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5em solid #FF5000;
+    position: relative; /* Add position relative for dropdown */
+}
+
+a{
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    font-size: 1.25em;
+    color: white;
+    transition: ease-in-out 400ms;
+}
+
+header span{
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    font-size: 1.25em;
+    transition: ease-in-out 400ms;
+    cursor: pointer; /* Add cursor pointer */
+}
+
+header a{
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    font-size: 1.25em;
+    color: white;
+    text-decoration: none;
+    transition: ease-in-out 400ms;
+}
+
+header a:hover{
+    background: #FF5000;
+    border-radius: 0.375em;
+    color: black;
+    cursor: pointer;
+}
+
+.logo:hover{
+    background: transparent;
+    border-radius: 0.375em;
+    cursor: pointer;
+}
+
+header img:last-child {
+    margin-left: auto;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 10em;
+    box-shadow: 0px 0.5em 1em 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 0.75em 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #FF5000;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover span,
+.dropdown span:focus,
+.dropdown span:active {
+    background-color: #FF5000;
+    border-radius: 0.375em;
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 425px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1em;
+    }
+
+    header img {
+        width: 40px;
+    }
+
+    header a, header span {
+        font-size: 1em;
+        padding: 0.5em;
+    }
+}
