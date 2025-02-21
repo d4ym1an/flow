@@ -33,6 +33,31 @@ a{
     transition: ease-in-out 400ms;
 }
 
+footer{
+    text-align: center;
+    font-family: 'forzamedium';
+    color: white;
+    font-weight: 200;
+    padding: 2em;
+    border-top: dotted 3px#FF5000;
+}
+
+h2, h3{
+    font-family: 'forzamedium';
+    font-size: 2em;
+    color: white;
+    margin-left: 0.625em;
+    text-align: center;
+}
+
+p{
+    font-family: 'forzamedium';
+    font-size: 1.25em;
+    color: white;
+    margin-left: 0.625em;
+    text-align: center;
+}
+
 header span{
     padding-left: 0.625em;
     padding-right: 0.625em;
@@ -112,6 +137,8 @@ header img:last-child {
     margin-top: 5em;
     font-size: larger;
 }
+
+
 
 @media (max-width: 425px) {
     header {
