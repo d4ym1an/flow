@@ -11,6 +11,10 @@ body{
 
 header{
     background: black;
+    background-image: url(/imgs/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

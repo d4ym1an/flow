@@ -8,6 +8,7 @@ body {
     background-color: rgb(32, 32, 32);
     font-family: 'forzamedium';
     color: white;
+    overflow-x: hidden;
 }
 
 header {
@@ -54,7 +55,7 @@ header a:hover {
     cursor: pointer;
 }
 
-.logo:hover{
+.logo:hover {
     background: transparent;
 }
 
@@ -80,12 +81,23 @@ header img:last-child {
 
 .member, .vip {
     text-align: center;
+    transition: transform 0.3s;
 }
 
 .vip-section {
     width: 100%;
     text-align: center;
     margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.vip {
+    flex: 1 1 calc(33.33% - 40px); /* Adjust to fit 3 per row */
+    margin: 10px;
+    text-align: center;
 }
 
 .member img, .vip img {
@@ -128,7 +140,7 @@ footer {
 .dropdown-content {
     display: none;
     position: absolute;
-background-color: black;
+    background-color: black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -159,8 +171,9 @@ background-color: black;
 
 .badges {
     display: flex;
-    align-items: center;
+    justify-content: center;
     gap: 5px;
+    margin-top: 1em;
 }
 
 .badges img {
@@ -180,7 +193,7 @@ background-color: black;
     font-size: 0.875em;
 }
 
-.member-intro{
+.member-intro {
     margin-top: 4em;
     margin-bottom: 6em;
     text-align: center;
@@ -192,25 +205,54 @@ background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column-reverse;
     gap: 5px;
     white-space: nowrap;
+    p {
+        margin-top: 0px;
+    }
 }
 
-.lead-txt{
+.lead-txt, .member-txt {
     font-size: 1.5em;
     font-weight: 600;
     margin-top: 0.5em;
-    right: 25%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative; 
+    left: 0;
+    transform: none; 
 }
 
-.lead-txt::after {
+.lead-txt::after, .member-txt::after {
     content: '';
     display: block;
-    width: 60px;
+    width: 1200px;
+    height: 2px;
+    background-color: white;
     height: 2px;
     background-color: white;
     margin: 0.5em auto 0;
+}
+
+.normies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.normies .member {
+    flex: 1 1 calc(12.5% - 20px);
+    margin: 10px;
+}
+
+.member:hover, .vip:hover {
+    transform: scale(1.05);
+    color: #FF5000;
+}
+
+.member:hover a, .vip:hover a {
+    color: #FF5000;
+}
+
+ .vip-text{
+text-align: center;
 }
