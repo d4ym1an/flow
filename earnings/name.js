@@ -1,32 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const names = ['Fabin', 'Sabe', 'Clean', 'Yellow', 'Yzz.mtz', 'Fragger', 'Delta', 'Elite', 'Sheep', 'Egoist', 'adv', 'Slicer', 'Kovaaks', 'Axl', 'Zaowan', 'Lobotomy', 'Akney']; // Add the names you want to recognize
+    const names = ['Fabin', 'Sabe', 'Clean', 'Yellow', 'Yzz.mtz', 'Fragger', 'Delta', 'Elite', 'Sheep', 'Egoist', 'adv', 'Slicer', 'Kovaaks', 'Axl', 'Zaowan', 'Lobotomy', 'Akney','TheDon','Forest','Bebote']; // Add the names you want to recognize
     const imageUrl = '/imgs/flow.jpg';
+    const trophyEmoji = '🏆'; // Trophy emoji
 
-    names.forEach(name => {
-        const elements = document.querySelectorAll('*');
-        elements.forEach(element => {
-            if (element.children.length === 0 && new RegExp(`\\b${name}\\b`, 'i').test(element.textContent)) {
-                const parts = element.textContent.split(new RegExp(`\\b${name}\\b`, 'i'));
-                element.innerHTML = '';
-
-                parts.forEach((part, index) => {
-                    element.appendChild(document.createTextNode(part));
-                    if (index < parts.length - 1) {
-                        const span = document.createElement('span');
-                        span.textContent = name;
-                        span.style.color = '#ff5000';
-
-                        const img = document.createElement('img');
-                        img.src = imageUrl;
-                        img.width = 25;
-                        img.height = 25;
-                        img.style.marginLeft = '5px';
-
-                        element.appendChild(span);
-                        element.appendChild(img);
+    const elements = document.querySelectorAll('*:not(#roster *)');
+    elements.forEach(element => {
+        if (element.children.length === 0) {
+            let innerHTML = element.innerHTML;
+            names.forEach(name => {
+                const regex = new RegExp(`\\b${name}\\b`, 'gi');
+                innerHTML = innerHTML.replace(regex, match => {
+                    let replacement = `<span style="color: #ff5000;">${match}</span><img src="${imageUrl}" width="25" height="25" style="margin-left: 5px;">`;
+                    if (element.textContent.includes('MVP:') && element.textContent.includes(match)) {
+                        replacement += ` ${trophyEmoji}`;
                     }
+                    return replacement;
                 });
-            }
-        });
+            });
+            element.innerHTML = innerHTML;
+        }
     });
 });
