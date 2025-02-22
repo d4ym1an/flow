@@ -1,217 +1,85 @@
 @import url(/fonts/forza.css);
 
-*{
+body {
     margin: 0;
-}
-
-body{
-    background-color: rgb(5, 5, 5);
-    font-size: 1em; /* Adjust base font size */
-}
-
-header{
-    background: black;
-    background-image: url(/imgs/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: black;
     color: white;
-    padding: 2em;
-    font-family: 'forzamedium';
+    display: flex;
+    flex-direction: column;
+    font-family: "forzamedium";
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: ease-in-out 400ms;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+/*  */
+
+header {
+    background-image: url(/imgs/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 100%;
+    border-bottom: #FF5000 0.5em solid;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    animation-name: headermove;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes headermove {
+    to {
+        background-position: 1920px;
+    }
+}
+
+header div {
     display: flex;
     align-items: center;
-    border-bottom: 0.5em solid #FF5000;
-    position: relative;
+    justify-content: space-around;
 }
 
-a{
-    padding-left: 0.625em;
-    padding-right: 0.625em;
-    font-size: 1.25em;
-    color: white;
+header span, header a {
+    margin: 0 10px;
+}
+
+header span {
+    padding: 0.5em;
     transition: ease-in-out 400ms;
+    border-radius: 10px;
 }
 
-header span{
-    padding-left: 0.625em;
-    padding-right: 0.625em;
-    font-size: 1.25em;
-    transition: ease-in-out 400ms;
-    cursor: pointer; /* Add cursor pointer */
+header img {
+    height: 90px;
 }
 
-header a{
-    padding-left: 0.625em;
-    padding-right: 0.625em;
-    font-size: 1.25em;
-    color: white;
-    text-decoration: none;
-    transition: ease-in-out 400ms;
+.bunny {
+    height: 50%;
+    align-self: flex-end;
 }
 
-header a:hover{
-    background: #FF5000;
-    border-radius: 0.375em;
-    color: black;
+a:hover, span:hover {
+    background-color: #FF5000;
     cursor: pointer;
 }
 
-.logo:hover{
-    background: transparent;
+.icon {
+    align-self: flex-end;
+    padding: 0;
 }
 
-header img:last-child {
-    margin-left: auto;
-}
-
-.flow-text{
-    opacity: 0;
-    animation: fadeInDrop 2000ms ease-in-out forwards;
-    width: 50%; /* Make the image smaller */
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
-} 
-
-@keyframes fadeInDrop {
-    0% {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.abtus{
-    font-family: 'forzamedium';
-    text-align: center;
-    color: white;
-}
-
-.about-us-text{
-    margin-top: 3em;
-}
-
-.abtus h3{
-    margin-top: 1em;
-    font-weight: 400;
-}
-
-.youtube{
-    font-family: 'forzamedium';
-    color: white;
-    text-align: center;
-    margin-top: 10em;
-    border: 0.1875em solid rgb(62, 62, 62);
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 0.375em;
-    max-width: 80%;
-}
-
-.youtube h4:hover, .youtube a:hover{
-    color: #FF5000;
-}
-
-iframe{
-    margin-top: 1em;
-    width: 100%;
-    max-width: 560px;
-    height: 315px;
-}
-
-.featured-members{
-    height: auto;
-    border-top: 0.1875em solid #FF5000;
-    border-bottom: 0.1875em dotted #FF5000;
-    background-image: url(/imgs/people-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center;
-    margin-top: 1em;
-    padding: 2em 0;
-}
-
-.featured-members h1, .featured-members p{
-    text-align: center;
-    font-family: 'forzamedium';
-    color: white;
-}
-
-.featured-members h1{
-    margin-top: 2em;
-}
-
-.featured-members p{
-    margin-top: 0.625em;
-}
-
-.users {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 2em;
-}
-
-.user-profile {
-    flex: 1 1 calc(33.333% - 1em);
-    margin: 0.5em;
-    text-align: center;
-    color: white;
-    font-family: 'forzamedium';
-}
-
-.user-profile img {
-    border-radius: 50%;
-    width: 6.25em;
-    height: 6.25em;
-}
-
-.user-profile a {
-    display: block;
-    color: #FF5000;
-    margin-top: 0.5em;
-    text-decoration: none;
-}
-
-.user-profile a:hover {
-    text-decoration: underline;
-}
-
-.user-profile p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.user-profile p img {
-    margin-left: 0.3125em;
-    width: 1.25em;
-    height: 1.25em;
-}
-
-footer{
-    text-align: center;
-    font-family: 'forzamedium';
-    color: white;
-    font-weight: 200;
-    margin: 1.5625em;
-}
-
-.popup {
-    position: absolute;
-    background-image: url(/imgs/bg.jpg);
-    color: white;
-    padding: 0.3125em;
-    border-radius: 0.3125em;
-    border: 0.0625em solid #FF5000;
-    z-index: 1000;
-    font-family: 'forzamedium';
-    font-size: 0.875em;
+.icon:hover {
+    background: none;
 }
 
 .dropdown {
@@ -223,6 +91,8 @@ footer{
     display: none;
     position: absolute;
     background-color: black;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
     min-width: 10em;
     box-shadow: 0px 0.5em 1em 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -237,7 +107,6 @@ footer{
 
 .dropdown-content a:hover {
     background-color: #FF5000;
-    color: black;
 }
 
 .dropdown:hover .dropdown-content {
@@ -249,118 +118,114 @@ footer{
 .dropdown span:active {
     background-color: #FF5000;
     border-radius: 0.375em;
-    color: black;
+    color: white;
     cursor: pointer;
 }
 
-.content {
+/*  */
+
+main div {
+    margin-top: 10em;
     display: flex;
-    justify-content: space-between;
-    padding: 2em;
-    align-items: flex-start; /* Align items to the start */
+    flex-direction: column;
+    align-items: center;
 }
 
-.tournaments-list {
-    flex: 1;
-    margin-right: 1em;
-    align-self: flex-start; /* Align self to the start */
-}
-
-.roster {
-    flex: 1;
-    margin-left: 1em;
-    background-color: #1a1a1a;
+.videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: gray 3px solid;
     padding: 1em;
-    border-radius: 0.5em;
+    margin-bottom: 2em;
+    width: 80%;
+}
+
+.videos h2 {
+    margin: 0;
+}
+
+.videos a {
+    text-decoration: underline;
+}
+.videos a:hover {
+    background: none;
+    color: #FF5000;
+}
+.videos iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+}
+
+.abt {
+    border-bottom: #FF5000 0.5em solid;
+}
+
+/*  */
+
+.feat {
+    background-image: url(/imgs/people-bg.jpg);
+    background-position: center;
+    margin-top: 0;
+    padding-bottom: 2em;
+    border-bottom: #FF5000 dotted 0.5em;
+}
+
+.users {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 700px;
+    margin-top: 0;
+}
+
+.user-profile {
+    margin: 0 10px;
+    width: 160px;
+}
+
+.user-profile > img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.user-profile p img {
+    margin: 0 3px;
+}
+
+.user-profile a {
+    color: #FF5000;
+}
+
+.user-profile a:hover {
+    background: none;
+    text-decoration: underline;
+}
+
+.popup {
+    position: absolute;
+    background-image: url(/imgs/bg.jpg);
     color: white;
-    align-self: flex-start; /* Align self to the start */
-}
-
-.roster h2 {
+    padding: 0.3125em;
+    border-radius: 0.3125em;
+    border: 0.0625em solid #FF5000;
+    z-index: 1000;
     font-family: 'forzamedium';
-    color: #ff5000;
+    font-size: 0.875em;
 }
 
-.roster ul {
-    list-style-type: none;
-    padding: 0;
+/*  */
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 3em 0;
 }
 
-.roster li {
-    margin: 0.5em 0;
-    font-family: 'forzamedium';
-}
-
-@media (max-width: 425px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1em;
-    }
-
-    header img {
-        width: 40px;
-    }
-
-    header a, header span {
-        font-size: 1em;
-        padding: 0.5em;
-    }
-
-    .abtus h1 {
-        font-size: 1.5em;
-    }
-
-    .abtus h3 {
-        font-size: 1em;
-    }
-
-    .youtube {
-        margin-top: 5em;
-        padding: 1em;
-        max-width: 100%;
-    }
-
-    .youtube h1 {
-        font-size: 1.5em;
-    }
-
-    .youtube h4 {
-        font-size: 1em;
-    }
-
-    .featured-members {
-        padding: 1em 0;
-    }
-
-    .featured-members h1 {
-        font-size: 1.5em;
-    }
-
-    .featured-members p {
-        font-size: 1em;
-    }
-
-    .user-profile {
-        flex: 1 1 100%;
-        margin: 0.5em 0;
-    }
-
-    .user-profile img {
-        width: 4em;
-        height: 4em;
-    }
-
-    .user-profile p {
-        font-size: 0.875em;
-    }
-
-    .user-profile a {
-        font-size: 0.875em;
-    }
-
-    footer {
-        font-size: 0.875em;
-        margin: 1em;
-    }
+footer p {
+    width: 90vw;
+    margin: auto;
+    margin-top: 10px;
 }
