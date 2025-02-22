@@ -79,7 +79,7 @@ header img:last-child {
     width: 100%;
 }
 
-.member, .vip {
+.member, .vip, .normies {
     text-align: center;
     transition: transform 0.3s;
 }
@@ -100,14 +100,14 @@ header img:last-child {
     text-align: center;
 }
 
-.member img, .vip img {
+.member img, .vip img, .normies img {
     width: 150px;
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.member p, .vip p {
+.member p, .vip p, .normies p {
     margin-top: 10px;
     font-size: 1.2em;
 }
@@ -239,10 +239,13 @@ footer {
     justify-content: center;
 }
 
-.normies .member {
-    flex: 1 1 calc(12.5% - 20px);
+/* .member {
+    flex: 1 1 calc(16.66% - 20px);
+    margin: 5px;
     margin: 10px;
-}
+    text-align: center;
+    transition: transform 0.3s;
+} */
 
 .member:hover, .vip:hover {
     transform: scale(1.05);

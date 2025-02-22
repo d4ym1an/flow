@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const stars = document.querySelectorAll('.stars');
     const verifieds = document.querySelectorAll('.verifieds');
     const leads = document.querySelectorAll('.leads');
+    const trophys = document.querySelectorAll('.trophys');
+    const videos = document.querySelectorAll('.videos');
 
     stars.forEach(star => {
         star.addEventListener('mouseenter', () => {
@@ -22,6 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
             showPopup(lead, 'This user is apart of our lead team within flow.');
         });
         lead.addEventListener('mouseleave', hidePopup);
+    });
+
+    trophys.forEach(trophy => {
+        trophys.addEventListener('mouseenter', () => {
+            showPopup(trophy, 'This user has won a tourney.');
+        });
+        trophys.addEventListener('mouseleave', hidePopup);
+    });
+
+    videos.forEach(video => {
+        videos.addEventListener('mouseenter', () => {
+            showPopup(video, 'This user a content creator.');
+        });
+        videos.addEventListener('mouseleave', hidePopup);
     });
 });
 
