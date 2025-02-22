@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flow // 404</title>
+    <style>
+        @import url(/fonts/forza.css);
+
+        body {
+            font-family: 'forzabold';
+            margin: 0;
+            padding: 0;
+            color: #ff5000;
+            background-color: #000000;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Video background styling */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .four-o-four {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 10em;
+            margin: 0;
+        }
+
+        p {
+            font-size: 2em;
+            font-family: 'forzamedium';
+            margin: 0;
+            color: white;
+        }
+
+        a {
+            font-size: 1.5em;
+            color: #ff5000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .blinking-underline {
+            display: inline-block;
+            width: 10px;
+            height: 1em;
+            background-color: white;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="/imgs/topo-wave.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="four-o-four">
+        <h1>404<span class="blinking-underline"></span></h1>
+        <p>Page not found</p>
+        <a href="/">Go back to the homepage</a>
+    </div>
+</body>
+
+</html>
