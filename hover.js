@@ -27,18 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     trophys.forEach(trophy => {
-        trophys.addEventListener('mouseenter', () => {
+        trophy.addEventListener('mouseenter', () => { // ✅ Corrected
             showPopup(trophy, 'This user has won a tourney.');
         });
-        trophys.addEventListener('mouseleave', hidePopup);
+        trophy.addEventListener('mouseleave', hidePopup);
     });
-
+    
     videos.forEach(video => {
-        videos.addEventListener('mouseenter', () => {
-            showPopup(video, 'This user a content creator.');
+        video.addEventListener('mouseenter', () => {
+            showPopup(video, 'This user is a content creator.');
         });
-        videos.addEventListener('mouseleave', hidePopup);
+        video.addEventListener('mouseleave', hidePopup);
     });
+    
 });
 
 function showPopup(element, message) {
