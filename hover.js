@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const leads = document.querySelectorAll('.leads');
     const trophys = document.querySelectorAll('.trophys');
     const videos = document.querySelectorAll('.videos');
+    const designers = document.querySelectorAll('.designers');
 
     stars.forEach(star => {
         star.addEventListener('mouseenter', () => {
@@ -39,7 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         video.addEventListener('mouseleave', hidePopup);
     });
-    
+
+    designers.forEach(designer => {
+        designer.addEventListener('mouseenter', () => {
+            showPopup(designer, 'This user has made assets for flow.');
+        });
+        designer.addEventListener('mouseleave', hidePopup);
+    });
 });
 
 function showPopup(element, message) {

@@ -235,12 +235,27 @@ footer {
     margin: 0.5em auto 0;
 }
 
-.normies{
+.normies, .cc{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 2em;
 }
+
+.expand{
+    transition: transform 0.3s;
+
+    gap: 20px;
+    margin: 0.5em;
+    width: 80vw;
+    text-align: left;
+    margin-top: 0.5em;
+    position: relative;
+    left: 0;
+    transform: none;
+}
+
+
 
 .expand:hover{
     transform: scale(1.05);
@@ -248,8 +263,6 @@ footer {
     color: #FF5000;
 }
 
-.expand{
-}
 /* .member {
     flex: 1 1 calc(16.66% - 20px);
     margin: 5px;
