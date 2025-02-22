@@ -69,6 +69,8 @@ header img:last-child {
     align-items: center;
     gap: 20px;
     margin-top: 2em;
+    margin: auto;
+    width: 60vw;
 }
 
 .member-list {
