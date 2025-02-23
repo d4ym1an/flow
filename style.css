@@ -9,58 +9,56 @@ body {
     font-family: "forzamedium";
 }
 
-a {
-    text-decoration: none;
-    color: white;
-    transition: ease-in-out 400ms;
-    padding: 0.5em;
-    border-radius: 10px;
-}
-
-/*  */
-
 header {
+    background: black;
     background-image: url(/imgs/bg.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100px;
-    width: 100%;
-    border-bottom: #FF5000 0.5em solid;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    animation-name: headermove;
-    animation-duration: 14s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes headermove {
-    to {
-        background-position: 1920px;
-    }
-}
-
-header div {
+    color: white;
+    padding: 2em;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    border-bottom: 7px solid #FF5000;
 }
 
-header span, header a {
-    margin: 0 10px;
+a {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: larger;
+    color: white;
+    transition: ease-in-out 400ms;
 }
 
 header span {
-    padding: 0.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: larger;
     transition: ease-in-out 400ms;
-    border-radius: 10px;
 }
 
-header img {
-    height: 90px;
+header a {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: larger;
+    color: white;
+    text-decoration: none;
+    transition: ease-in-out 400ms;
+}
+
+header a:hover {
+    background: #FF5000;
+    border-radius: 6px;
+    color: black;
+    cursor: pointer;
+}
+
+.logo:hover {
+    background: transparent;
+}
+
+header img:last-child {
+    margin-left: auto;
 }
 
 .bunny {
@@ -73,14 +71,6 @@ a:hover, span:hover {
     cursor: pointer;
 }
 
-.icon {
-    align-self: flex-end;
-    padding: 0;
-}
-
-.icon:hover {
-    background: none;
-}
 
 .dropdown {
     position: relative;
@@ -183,7 +173,7 @@ main div {
 
 .user-profile {
     margin: 0 10px;
-    width: 160px;
+    width: 200px;
 }
 
 .user-profile > img {

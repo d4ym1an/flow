@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const verifieds = document.querySelectorAll('.verifieds');
     const leads = document.querySelectorAll('.leads');
     const trophys = document.querySelectorAll('.trophys');
-    const videos = document.querySelectorAll('.videos');
+    const contentCreators = document.querySelectorAll('.contentCreators');
     const designers = document.querySelectorAll('.designers');
+    const OGs = document.querySelectorAll('.ogs');
 
     stars.forEach(star => {
         star.addEventListener('mouseenter', () => {
@@ -34,11 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
         trophy.addEventListener('mouseleave', hidePopup);
     });
     
-    videos.forEach(video => {
-        video.addEventListener('mouseenter', () => {
-            showPopup(video, 'This user is a content creator.');
+    contentCreators.forEach(contentCreator => {
+        contentCreator.addEventListener('mouseenter', () => {
+            showPopup(contentCreator, 'This user is a content creator.');
         });
-        video.addEventListener('mouseleave', hidePopup);
+        contentCreator.addEventListener('mouseleave', hidePopup);
     });
 
     designers.forEach(designer => {
@@ -47,6 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         designer.addEventListener('mouseleave', hidePopup);
     });
+
+    OGs.forEach(OG => {
+        OG.addEventListener('mouseenter', () => {
+            showPopup(OG, 'This user is an original member of flow.');
+        });
+        OG.addEventListener('mouseleave', hidePopup);
+    }); 
 });
 
 function showPopup(element, message) {
