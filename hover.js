@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contentCreators = document.querySelectorAll('.contentCreators');
     const designers = document.querySelectorAll('.designers');
     const OGs = document.querySelectorAll('.ogs');
+    const comps = document.querySelectorAll('.comps');
 
     stars.forEach(star => {
         star.addEventListener('mouseenter', () => {
@@ -54,6 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
             showPopup(OG, 'This user is an original member of flow.');
         });
         OG.addEventListener('mouseleave', hidePopup);
+    }); 
+
+    comps.forEach(comp => {
+        comp.addEventListener('mouseenter', () => {
+            showPopup(comp, 'This member is apart of our comp team.');
+        });
+        comp.addEventListener('mouseleave', hidePopup);
     }); 
 });
 
