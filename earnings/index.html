@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flow // earnings</title>
-    <link rel="icon" href="/imgs/flow.png" type="image/png">
+    <link rel="icon" href="/imgs/flow.jpg" type="image/png">
     <link rel="stylesheet" href="/earnings/style.css">
 </head>
 
 <body>
     <header>
         <a class="logo" href="/index.html">
-            <img src="/imgs/flow.png" width="50px">
+            <img src="/imgs/flow.jpg" width="50px">
         </a>
         <div class="dropdown">
             <span>socials</span>
@@ -34,10 +34,11 @@
                 achievements:</p>
         </div>
     </section>
-
     <div class="content">
         <div class="tournaments-list" id="tournaments-list">
             <h2 style="color: #ff5000;">COMPETITIVE RECORD</h2>
+    <details>
+        <summary class="expand cc-expand">RESUNZ TOURNAMENTS</summary>
             <div class="resunz-tourney" id="resunz-tourney">
                 <div class="resunz-2v2-point">
                     <h3>RESUNZ | 2v2 POINT (EU)</h3>
@@ -52,14 +53,14 @@
                     <p>MVP: Sabe</p>
                 </div>
                 <div class="resunz-2v2-point-bil">
-                    <a href="https://challonge.com/resunzEU2v2" target="_blank">
+                    <a href="https://challonge.com/resunzEU2v2" target="_blank" class="tourney">
                         <h3>RESUNZ | 1Bil 2v2 POINT (EU)</h3>
                     </a>
                     <p>Fabin + Cloud 🥇</p>
                     <p>Clean + Delta 🥈</p>
                     <p>Axl + Foolish 🥉</p>
                     <p>MVP: Fabin</p>
-                    <a href="https://challonge.com/resunzNA2v2" target="_blank">
+                    <a href="https://challonge.com/resunzNA2v2" target="_blank" class="tourney">
                         <h3>RESUNZ | 1Bil 2v2 POINT (NA)</h3>
                     </a>
                     <p>Fabin + Sabe 🥇</p>
@@ -68,7 +69,7 @@
                     <p>MVP: Fabin 🏆</p>
                 </div>
                 <div class="flow-x-resunz">
-                    <a href="https://challonge.com/1v1EUresunz" target="_blank">
+                    <a href="https://challonge.com/1v1EUresunz" target="_blank" class="tourney">
                         <h3>FLOW X RESUNZ | 500M 1V1 SND (EU)</h3>
                     </a>
                     <p>Axl 🥇</p>
@@ -76,7 +77,7 @@
                     <p>Forest 🥉</p>
                     <p>MVP: Axl</p>
 
-                    <a href="https://challonge.com/1v1naresunz" target="_blank">
+                    <a href="https://challonge.com/1v1naresunz" target="_blank" class="tourney">
                         <h3>FLOW X RESUNZ | 500M 1V1 SND (NA)</h3>
                     </a>
                     <p>Yzz.mtz 🥇</p>
@@ -85,38 +86,81 @@
                     <p>MVP: Yzz.mtz</p>
                 </div>
             </div>
-
+    </details>
+    <details>
+        <summary class="expand cc-expand">FLOW TOURNAMENTS</summary>
             <div class="flow-tournaments">
-                <a href="https://challonge.com/FlowUDogsEU1" target="_blank">
+                <a href="https://challonge.com/FlowUDogsEU1" target="_blank" class="tourney">
                     <h3>Flow Underdogs (EU)</h3>
                 </a>
                 <p>Akney 🥇</p>
                 <p>Vipex 🥈</p>
                 <p>Susybaka 🥉</p>
 
-                <a href="https://challonge.com/FlowUDogsNA1" target="_blank">
+                <a href="https://challonge.com/FlowUDogsNA1" target="_blank" class="tourney">
                     <h3>Flow Underdogs (NA)</h3>
                 </a>
                 <p>adv 🥇</p>
                 <p>Lobotomy 🥈</p>
                 <p>N1njaEatxr 🥉</p>
             </div>
-            <div class="other-tournaments" id="other-tournaments">
-                <a href="https://challonge.com/Cry_Tournament_EU" target="_blank">
-                    <h3>CRY | 1v1 Tournament (EU)</h3>
-                </a>
-                <p>Fabin 🥇</p>
-                <p>Fabin 🥈</p>
-                <p>Goose 🥉</p>
-                <p>MVP: Fabin</p>
 
-                <a href="https://challonge.com/Cry_Tournament_NA" target="_blank">
-                    <h3>CRY | 1v1 Tournament (NA)</h3>
+            <div class="flow-x-resunz">
+                <a href="https://challonge.com/1v1EUresunz" target="_blank" class="tourney">
+                    <h3>FLOW X RESUNZ | 500M 1V1 SND (EU)</h3>
                 </a>
-                <p>Sabe 🥇</p>
-                <p>Yzz.mtz 🥈</p>
-                <p>Apollyon 🥉</p>
-                <p>MVP: Sabe</p>
+                <p>Axl 🥇</p>
+                <p>Zaowan 🥈</p>
+                <p>Forest 🥉</p>
+                <p>MVP: Axl</p>
+
+                <a href="https://challonge.com/1v1naresunz" target="_blank" class="tourney">
+                    <h3>FLOW X RESUNZ | 500M 1V1 SND (NA)</h3>
+                </a>
+                <p>Yzz.mtz 🥇</p>
+                <p>TheDon 🥈</p>
+                <p>Fragger 🥉</p>
+                <p>MVP: Yzz.mtz</p>
+            </div>
+    </details>
+    <details>
+        <summary class="expand cc-expand">KC / CRY TOURNAMENTS</summary>
+        <div class="kc-cry-tournaments" id="kc-cry-tournaments">
+            <a href="https://challonge.com/Cry_Tournament_EU" target="_blank" class="tourney">
+                <h3>CRY | 1v1 Tournament (EU)</h3>
+            </a>
+            <p>Fabin 🥇</p>
+            <p>Fabin 🥈</p>
+            <p>Goose 🥉</p>
+            <p>MVP: Fabin</p>
+
+            <a href="https://challonge.com/Cry_Tournament_NA" target="_blank" class="tourney">
+                <h3>CRY | 1v1 Tournament (NA)</h3>
+            </a>
+            <p>Sabe 🥇</p>
+            <p>Yzz.mtz 🥈</p>
+            <p>Apollyon 🥉</p>
+            <p>MVP: Sabe</p>
+
+            <a href="https://challonge.com/yebm2300" target="_blank" class="tourney">
+                <h3>KC | 1v1 Tournament (EU)</h3>
+            </a>
+            <p>Clean 🥇</p>
+            <p>Delta 🥈</p>
+            <p>Spring 🥉</p>
+            <p>MVP: Clean</p>
+
+            <a href="https://challonge.com/u5rnag71" target="_blank" class="tourney">
+                <h3>KC | 1v1 Tournament (NA)</h3>
+            </a>
+            <p>Trailed 🥇</p>
+            <p>Bebote 🥈</p>
+            <p>Elite 🥉</p>
+            <p>MVP: Trailed</p>
+        </div>
+    </details>
+            <div class="other-tournaments" id="other-tournaments">
+                
 
                 <h3>SOAR | 2v2 POINT (EU)</h3>
                 <p>Egoist + Yellow 🥇</p>
@@ -136,23 +180,7 @@
                 <p>Sniper Gecko + Spider 🥉</p>
                 <p>MVP: Fabin</p>
 
-                <a href="https://challonge.com/yebm2300" target="_blank">
-                    <h3>KC | 1v1 Tournament (EU)</h3>
-                </a>
-                <p>Clean 🥇</p>
-                <p>Delta 🥈</p>
-                <p>Spring 🥉</p>
-                <p>MVP: Clean</p>
-
-                <a href="https://challonge.com/u5rnag71" target="_blank">
-                    <h3>KC | 1v1 Tournament (NA)</h3>
-                </a>
-                <p>Trailed 🥇</p>
-                <p>Bebote 🥈</p>
-                <p>Elite 🥉</p>
-                <p>MVP: Trailed</p>
-
-                <a href="https://challonge.com/ch353coh" target="_blank">
+                <a href="https://challonge.com/ch353coh" target="_blank" class="tourney">
                     <h3>NINE X AXL | 100$ 1V1 Tournament (EU)</h3>
                 </a>
                 <p>Fabin 🥇</p>
@@ -160,7 +188,7 @@
                 <p>NukeMarvin 🥉</p>
                 <p>MVP: Fabin</p>
 
-                <a href="https://challonge.com/6oqj6l6s" target="_blank">
+                <a href="https://challonge.com/6oqj6l6s" target="_blank" class="tourney">
                     <h3>NINE X AXL | 100$ 1V1 Tournament (NA)</h3>
                 </a>
                 <p>Fabin 🥇</p>

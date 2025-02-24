@@ -51,6 +51,10 @@ h2, h3{
     text-align: center;
 }
 
+.tourney{
+    font-size: medium;
+}
+
 p{
     font-family: 'forzamedium';
     font-size: 1.25em;
@@ -152,6 +156,10 @@ header img:last-child {
     align-self: flex-start; /* Align self to the start */
 }
 
+.tournaments-list a:hover{
+    color: #FF5000;
+}
+
 .roster {
     flex: 1;
     margin-left: 1em;
@@ -207,6 +215,19 @@ header img:last-child {
     border-radius: 0.375em;
     cursor: pointer;
     z-index: 1000;
+}
+
+.expand{
+    font-family: 'forzabold';
+    transition: transform 0.3s;
+    padding-top: 1em;
+}
+
+
+.expand:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    color: #FF5000;
 }
 
 @media (max-width: 425px) {

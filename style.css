@@ -30,17 +30,18 @@ a {
     transition: ease-in-out 400ms;
 }
 
-header span {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: larger;
+header span{
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    font-size: 1.25em;
     transition: ease-in-out 400ms;
+    cursor: pointer; /* Add cursor pointer */
 }
 
-header a {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: larger;
+header a{
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    font-size: 1.25em;
     color: white;
     text-decoration: none;
     transition: ease-in-out 400ms;
@@ -157,6 +158,7 @@ main div {
 .feat {
     background-image: url(/imgs/people-bg.jpg);
     background-position: center;
+    background-size: cover;
     margin-top: 0;
     padding-bottom: 2em;
     border-bottom: #FF5000 dotted 0.5em;
@@ -218,4 +220,21 @@ footer p {
     width: 90vw;
     margin: auto;
     margin-top: 10px;
+}
+
+@media (max-width: 425px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1em;
+    }
+
+    header img {
+        width: 40px;
+    }
+
+    header a, header span {
+        font-size: 1em;
+        padding: 0.5em;
+    }
 }

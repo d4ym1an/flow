@@ -30,6 +30,7 @@ a {
     font-size: larger;
     color: white;
     transition: ease-in-out 400ms;
+    text-decoration: none;
 }
 
 header span {
@@ -241,6 +242,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 2em;
+    text-decoration: none;
 }
 
 .ogs-member{
@@ -250,6 +252,7 @@ footer {
 .expand{
     transition: transform 0.3s;
     gap: 20px;
+    padding: 1em;
     margin: 0.5em;
     width: 80vw;
     text-align: left;
@@ -278,6 +281,7 @@ footer {
 .member:hover, .vip:hover {
     transform: scale(1.05);
     color: #FF5000;
+    text-decoration: underline;
 }
 
 .member:hover a, .vip:hover a {
