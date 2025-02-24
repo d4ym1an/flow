@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const names = ['Fabin', 'Sabe', 'Clean', 'Yellow', 'Yzz.mtz', 'Fragger', 'Delta', 'Elite', 'Sheep', 'Egoist', 'adv', 'Slicer', 'Kovaaks', 'Axl', 'Zaowan', 'Lobotomy', 'Akney','TheDon','Forest','Bebote','Cloud']; // Add the names you want to recognize
+    const names = ['Fabin', 'Sabe', 'Clean', 'Yellow', 'Yzz.mtz', 'Fragger', 'Delta', 'Elite', 'Sheep', 'Egoist', 'adv', 'Slicer', 'Kovaaks', 'Axl', 'Zaowan', 'Lobotomy', 'Akney','TheDon','Forest','Bebote','Cloud','Irrvlo']; // Add the names you want to recognize
     const imageUrl = '/imgs/flow.jpg';
     const trophyEmoji = '🏆'; // Trophy emoji
 
