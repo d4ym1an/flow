@@ -153,6 +153,7 @@ header img:last-child {
 .tournaments-list {
     flex: 1;
     margin-right: 1em;
+    border-right:#fff solid 0.5em;
     align-self: flex-start; /* Align self to the start */
 }
 
@@ -164,7 +165,6 @@ header img:last-child {
     flex: 1;
     margin-left: 1em;
     padding: 1em;
-    border-left:#fff solid 0.5em;
     color: white;
     align-self: flex-start; /* Align self to the start */
 }
