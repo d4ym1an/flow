@@ -9,6 +9,11 @@ body {
     font-family: 'forzamedium';
     color: white;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 header {
@@ -22,6 +27,7 @@ header {
     display: flex;
     align-items: center;
     border-bottom: 7px solid #FF5000;
+    width: 100%;
 }
 
 a {
@@ -34,16 +40,17 @@ a {
 }
 
 header span {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: larger;
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    font-size: 1.25em;
     transition: ease-in-out 400ms;
+    cursor: pointer;
 }
 
 header a {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: larger;
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    font-size: 1.25em;
     color: white;
     text-decoration: none;
     transition: ease-in-out 400ms;
@@ -125,11 +132,12 @@ footer {
     display: flex;
     gap: 5px;
     margin-top: 1em;
+    justify-content: center;
 }
 
 .badges img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 0;
 }
 
@@ -155,6 +163,8 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    margin-top: 1em;
 }
 
 .promo-1, .promo-2{
@@ -176,4 +186,88 @@ footer {
 
 .lastest-video:hover{
     color: #FF5000;
+}
+
+.main-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.abt-me {
+    margin-left: 2em;
+    flex: 1;
+    order: 2; /* Add order property */
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15em;
+    order: 1; /* Add order property */
+}
+
+.promo {
+    order: 3; /* Add order property */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 2em auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.song {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.song img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 0.5em;
+}
+
+.song-name {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.song-controls {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.song-controls button {
+    background-color: #FF5000;
+    border: none;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.song-controls button:hover {
+    background-color: #e04a00;
+}
+
+.song iframe {
+    margin-top: 1em;
+    border: none;
+    width: 300px;
+    height: 80px;
+}
+
+.latest {
+    margin-top: 2em;
+    text-align: center;
 }
