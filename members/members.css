@@ -27,7 +27,6 @@ header {
     display: flex;
     align-items: center;
     border-bottom: 7px solid #FF5000;
-    width: 100%;
 }
 
 a {
@@ -181,11 +180,17 @@ footer {
 .latest-video{
     color: white;
     text-decoration: underline;
-    transform:all 300ms;
+    transform:all 50ms;
+    font-size: 1.5em;
 }
 
-.lastest-video:hover{
+.latest-video:hover{
     color: #FF5000;
+}
+
+.yt-icon{
+    margin-left: 10px;
+    width: 30px;
 }
 
 .main-profile {
@@ -210,6 +215,19 @@ footer {
 
 .promo {
     order: 3; /* Add order property */
+    position: relative;
+    z-index: 1;
+}
+
+.rankings-promo {
+    display: flex;
+    position: relative;
+    left: 30%;
+}
+
+.ranking {
+    position: absolute;
+    left: -200px; /* Adjust this value as needed to place it behind .promo */
 }
 
 .main-content {
@@ -226,7 +244,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1em;
+    margin-top: 4em;
 }
 
 .song img {
@@ -271,3 +289,48 @@ footer {
     margin-top: 2em;
     text-align: center;
 }
+
+@media (max-width: 450px) {
+    body {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header a, header span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .profile-container {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .abt-me {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .rankings-promo {
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+    }
+
+    .ranking {
+        position: static;
+        margin-top: 1em;
+    }
+}
+

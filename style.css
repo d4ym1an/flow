@@ -238,3 +238,36 @@ footer p {
         padding: 0.5em;
     }
 }
+
+@media (max-width: 450px) {
+    body {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header a, header span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .videos {
+        width: 100%;
+    }
+
+    .users {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}

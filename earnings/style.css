@@ -82,15 +82,13 @@ header a{
 
 header a:hover{
     background: #FF5000;
-    border-radius: 0.375em;
+    border-radius: 6px;
     color: black;
     cursor: pointer;
 }
 
 .logo:hover{
     background: transparent;
-    border-radius: 0.375em;
-    cursor: pointer;
 }
 
 header img:last-child {
@@ -273,5 +271,32 @@ header img:last-child {
 
     #scroll-to-roster {
         display: block;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header a, header span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .tournaments-list, .roster {
+        width: 100%;
     }
 }
