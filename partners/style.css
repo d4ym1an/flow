@@ -1,0 +1,114 @@
+@import url(/fonts/forza.css);
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: "forzamedium";
+}
+
+header {
+    background: black;
+    background-image: url(/imgs/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    border-bottom: 7px solid #FF5000;
+}
+
+a {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: larger;
+    color: white;
+    transition: ease-in-out 400ms;
+}
+
+header span{
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    font-size: 1.25em;
+    transition: ease-in-out 400ms;
+    cursor: pointer; /* Add cursor pointer */
+}
+
+header a{
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    font-size: 1.25em;
+    color: white;
+    text-decoration: none;
+    transition: ease-in-out 400ms;
+}
+
+header a:hover {
+    background: #FF5000;
+    border-radius: 6px;
+    color: black;
+    cursor: pointer;
+}
+
+.logo:hover {
+    background: transparent;
+}
+
+header img:last-child {
+    margin-left: auto;
+}
+
+.bunny {
+    height: 50%;
+    align-self: flex-end;
+}
+
+a:hover, span:hover {
+    background-color: #FF5000;
+    cursor: pointer;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    min-width: 10em;
+    box-shadow: 0px 0.5em 1em 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 0.75em 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #FF5000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover span,
+.dropdown span:focus,
+.dropdown span:active {
+    background-color: #FF5000;
+    border-radius: 0.375em;
+    color: white;
+    cursor: pointer;
+}

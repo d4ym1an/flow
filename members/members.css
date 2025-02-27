@@ -34,7 +34,7 @@ header {
     position: fixed; /* Fix the header to the top of the screen */
     top: 0; /* Ensure it touches the top of the screen */
     left: 0; /* Ensure it starts from the left edge */
-    z-index: 1000; /* Ensure it stays on top of other elements */
+
     flex-wrap: wrap;
 }
 
@@ -167,6 +167,12 @@ footer {
     width: 14em;
 }
 
+.mega{
+    border-radius: 100%;
+    border: #FF5000 solid 4px;
+    width: 14em;
+}
+
 .name{
     display: flex;
     flex-direction: row;
@@ -175,18 +181,18 @@ footer {
     margin-top: 1em;
 }
 
-.promo-1, .promo-2{
+.promo-1, .promo-2, .promo-3{
     display: flex;
     flex-direction: row;
 }
 
-.promo-1  a,.promo-2 a{
+.promo-1  a,.promo-2 a,.promo-3 a{
     color: #FF5000;
     text-decoration: underline;
     transform: all 300ms;
 }
 
-.promo-1  p,.promo-2 p{
+.promo-1  p,.promo-2 p ,.promo-3 p{
     font-size: 1.1em;
     font-weight: 600;
 }
