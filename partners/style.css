@@ -112,3 +112,68 @@ a:hover, span:hover {
     color: white;
     cursor: pointer;
 }
+
+.top-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    h1{
+        font-size: 2.5em;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em; /* Reduce gap size */
+    padding: 1em; /* Reduce padding */
+    border: 1px solid #ffffff;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.grid-item a:hover{
+    background-color: #1c1c1c;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 80%; /* Reduce image size */
+    height: auto;
+}
+
+.resunz{
+text-align: center;
+}
+
+.resunz-r{
+    width: 500px;
+}
+
+.juiceclient{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column;
+}
+
+.partners-grid .grid-item a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

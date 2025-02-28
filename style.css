@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    background-color: black;
+    background-color: rgb(32, 32, 32);
     color: white;
     display: flex;
     flex-direction: column;
@@ -28,17 +28,18 @@ a {
     font-size: larger;
     color: white;
     transition: ease-in-out 400ms;
+    text-decoration: none;
 }
 
-header span{
+header span {
     padding-left: 0.625em;
     padding-right: 0.625em;
     font-size: 1.25em;
     transition: ease-in-out 400ms;
-    cursor: pointer; /* Add cursor pointer */
+    cursor: pointer;
 }
 
-header a{
+header a {
     padding-left: 0.625em;
     padding-right: 0.625em;
     font-size: 1.25em;
@@ -62,6 +63,10 @@ header img:last-child {
     margin-left: auto;
 }
 
+.logo:hover {
+    background: transparent;
+}
+
 .bunny {
     height: 50%;
     align-self: flex-end;
@@ -82,34 +87,31 @@ a:hover, span:hover {
     display: none;
     position: absolute;
     background-color: black;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
-    min-width: 10em;
-    box-shadow: 0px 0.5em 1em 0px rgba(0,0,0,0.2);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
     color: white;
-    padding: 0.75em 1em;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content a:hover {
     background-color: #FF5000;
+    color: black;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-.dropdown:hover span,
-.dropdown span:focus,
-.dropdown span:active {
+.dropdown:hover span {
     background-color: #FF5000;
-    border-radius: 0.375em;
-    color: white;
+    border-radius: 6px;
+    color: black;
     cursor: pointer;
 }
 
@@ -222,23 +224,6 @@ footer p {
     margin-top: 10px;
 }
 
-@media (max-width: 425px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1em;
-    }
-
-    header img {
-        width: 40px;
-    }
-
-    header a, header span {
-        font-size: 1em;
-        padding: 0.5em;
-    }
-}
-
 @media (max-width: 450px) {
     body {
         flex-direction: column;
@@ -255,17 +240,17 @@ footer p {
         margin-bottom: 10px;
     }
 
-    .content {
+    .gallery {
+        width: 100%;
+    }
+
+    .member-list {
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
 
-    .videos {
-        width: 100%;
-    }
-
-    .users {
+    .vip-section {
         flex-direction: column;
         align-items: center;
         width: 100%;

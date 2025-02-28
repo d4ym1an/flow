@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const designers = document.querySelectorAll('.designers');
     const OGs = document.querySelectorAll('.ogs');
     const comps = document.querySelectorAll('.comps');
+    const dgfs = document.querySelectorAll('.dgfs');
+    const gfs = document.querySelectorAll('.gfs');
 
     stars.forEach(star => {
         star.addEventListener('mouseenter', () => {
@@ -62,6 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
             showPopup(comp, 'This member is apart of our comp team.');
         });
         comp.addEventListener('mouseleave', hidePopup);
+    }); 
+    dgfs.forEach(dgf => {
+        dgf.addEventListener('mouseenter', () => {
+            showPopup(dgf, 'This is Daymians girlfriend!');
+        });
+        dgf.addEventListener('mouseleave', hidePopup);
+    }); 
+
+    gfs.forEach(gf => {
+        gf.addEventListener('mouseenter', () => {
+            showPopup(gf, 'This is ONE of MANY fabins egirls.');
+        });
+        gf.addEventListener('mouseleave', hidePopup);
     }); 
 });
 

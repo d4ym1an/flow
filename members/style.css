@@ -124,18 +124,6 @@ footer {
     margin: 25px;
 }
 
-.popup {
-    position: absolute;
-    background-image: url(/imgs/bg.jpg);
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #FF5000;
-    z-index: 1000;
-    font-family: 'forzamedium';
-    font-size: 14px;
-}
-
 .dropdown {
     position: relative;
     display: inline-block;
