@@ -30,7 +30,7 @@ a {
     transition: ease-in-out 400ms;
 }
 
-header span{
+header span {
     padding-left: 0.625em;
     padding-right: 0.625em;
     font-size: 1.25em;
@@ -38,7 +38,7 @@ header span{
     cursor: pointer; /* Add cursor pointer */
 }
 
-header a{
+header a {
     padding-left: 0.625em;
     padding-right: 0.625em;
     font-size: 1.25em;
@@ -71,7 +71,6 @@ a:hover, span:hover {
     background-color: #FF5000;
     cursor: pointer;
 }
-
 
 .dropdown {
     position: relative;
@@ -113,71 +112,52 @@ a:hover, span:hover {
     cursor: pointer;
 }
 
-.top-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 2em;
-    margin-bottom: 2em;
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
 
-    h1{
-        font-size: 2.5em;
-        margin: 0;
-        padding: 0;
+h1, h2 {
+    color: white;
+}
+
+.download-link {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.download-link:hover {
+    background-color: #555;
+}
+
+.heading-text {
+    text-align: center;
+}
+
+.intro {
+    font-size: 8em;
+    line-height: 0.8em;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 2s forwards;
+    margin-bottom: 10px;
+}
+
+.logo-1{
+    background: white;
+    width: 30%;
+    
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-.partners-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5em; /* Reduce gap size */
-    padding: 1em; /* Reduce padding */
-    border: 1px solid #ffffff;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-.grid-item a:hover{
-    background-color: #1c1c1c;
-}
-
-.grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.grid-item img {
-    max-width: 80%; /* Reduce image size */
-    height: auto;
-}
-
-.resunz{
-text-align: center;
-}
-
-.resunz-r{
-    width: 500px;
-}
-
-.juiceclient{
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    flex-direction: column;
-}
-
-.underdogs-logo{
-    width: 300px;
-}
-
-.partners-grid .grid-item a{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
