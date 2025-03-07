@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    background-color: rgb(32, 32, 32);
+    background-color: #202020;
     color: white;
     display: flex;
     flex-direction: column;

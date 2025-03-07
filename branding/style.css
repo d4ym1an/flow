@@ -126,7 +126,6 @@ h1, h2 {
     margin: 10px 0;
     padding: 10px 20px;
     color: black;
-    text-decoration: none;
     border-radius: 5px;
 }
 
@@ -148,14 +147,46 @@ h1, h2 {
     margin-bottom: 10px;
 }
 
+.logos{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
 .logo-1{
     background: white;
     width: 30%;
     display: flex;
+    border-radius: 2em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
+}
+
+.logo-2{
+    background: rgb(29, 29, 29);
+    width: 30%;
+    display: flex;
+    border-radius: 2em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.download-link1 {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;;
+}
+
+.download-link1:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 @keyframes fadeIn {
