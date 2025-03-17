@@ -2,11 +2,13 @@
 
 body {
     margin: 0;
-    background-color: #202020;
+    background-color: rgb(32, 32, 32);
     color: white;
     display: flex;
     flex-direction: column;
     font-family: "forzamedium";
+    box-sizing: border-box; /* Added to prevent overflow */
+    overflow-x: hidden; /* Fixes horizontal overflow */
 }
 
 header {
@@ -132,6 +134,8 @@ main div {
     padding: 1em;
     margin-bottom: 2em;
     width: 80%;
+    max-width: 100%; /* Prevents overflow */
+    margin: 0 auto; /* Centers the element */
 }
 
 .videos h2 {
@@ -164,6 +168,8 @@ main div {
     margin-top: 0;
     padding-bottom: 2em;
     border-bottom: #FF5000 dotted 0.5em;
+    max-width: 100%; /* Prevents overflow */
+    margin: 0 auto; /* Centers the element */
 }
 
 .users {
@@ -228,11 +234,13 @@ footer p {
     body {
         flex-direction: column;
         align-items: flex-start;
+        overflow-x: hidden; /* Ensures no horizontal scroll on mobile */
     }
 
     header {
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
     }
 
     header a, header span {
@@ -254,5 +262,24 @@ footer p {
         flex-direction: column;
         align-items: center;
         width: 100%;
+    }
+
+    .feat, .abt {
+        width: 100%; /* Ensures full width on mobile */
+        padding: 0 1em; /* Adds padding to prevent content touching edges */
+        box-sizing: border-box; /* Includes padding in width calculation */
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+        max-width: 100%; /* Prevents overflow */
+        margin: 0 auto; /* Centers the iframe */
+        box-sizing: border-box;
+    }
+
+    #videoPlayer {
+        width: 100%;
+        height: auto;
     }
 }
