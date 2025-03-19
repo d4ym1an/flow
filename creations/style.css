@@ -2,11 +2,13 @@
 
 body {
     margin: 0;
-    background-color: black;
+    background-color: rgb(32, 32, 32);
     color: white;
     display: flex;
     flex-direction: column;
     font-family: "forzamedium";
+    box-sizing: border-box; /* Added to prevent overflow */
+    overflow-x: hidden; /* Fixes horizontal overflow */
 }
 
 header {
@@ -28,6 +30,7 @@ a {
     font-size: larger;
     color: white;
     transition: ease-in-out 400ms;
+    text-decoration: none;
 }
 
 header span {
@@ -35,7 +38,7 @@ header span {
     padding-right: 0.625em;
     font-size: 1.25em;
     transition: ease-in-out 400ms;
-    cursor: pointer; /* Add cursor pointer */
+    cursor: pointer;
 }
 
 header a {
@@ -62,6 +65,10 @@ header img:last-child {
     margin-left: auto;
 }
 
+.logo:hover {
+    background: transparent;
+}
+
 .bunny {
     height: 50%;
     align-self: flex-end;
@@ -72,6 +79,7 @@ a:hover, span:hover {
     cursor: pointer;
 }
 
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -81,118 +89,85 @@ a:hover, span:hover {
     display: none;
     position: absolute;
     background-color: black;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
-    min-width: 10em;
-    box-shadow: 0px 0.5em 1em 0px rgba(0,0,0,0.2);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
     color: white;
-    padding: 0.75em 1em;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content a:hover {
     background-color: #FF5000;
+    color: black;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-.dropdown:hover span,
-.dropdown span:focus,
-.dropdown span:active {
+.dropdown:hover span {
     background-color: #FF5000;
-    border-radius: 0.375em;
-    color: white;
+    border-radius: 6px;
+    color: black;
     cursor: pointer;
 }
 
-.container {
-    width: 80%;
-    margin: 20px auto;
+.container{
+    margin: 0 auto;
+    width: 90vw;
+    max-width: 1200px;
 }
 
-h1, h2 {
-    color: white;
-}
-
-.download-link {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 10px 20px;
-    color: black;
-    border-radius: 5px;
-}
-
-.download-link:hover {
-    background-color: black;
-    color: white;
-}
-
-.heading-text {
+.container h1{
     text-align: center;
 }
 
-.intro {
-    font-size: 8em;
-    line-height: 0.8em;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeIn 2s forwards;
-    margin-bottom: 10px;
+.container p{
+    text-align: center;
+    font-size: 1.2em;
 }
 
-.logos{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+.kirkaio{
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
-.logo-1{
-    background: white;
-    width: 30%;
-    display: flex;
-    border-radius: 2em;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 3em 0;
 }
 
-.logo-2{
-    background: rgb(29, 29, 29);
-    width: 30%;
-    display: flex;
-    border-radius: 2em;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    color: white;
+footer p {
+    width: 90vw;
+    margin: auto;
+    margin-top: 10px;
 }
 
-.download-link1 {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 10px 20px;
-    color: rgb(255, 255, 255);
-    border-radius: 5px;;
-}
-
-.download-link1:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+@media (max-width: 450px) {
+    body {
+        flex-direction: column;
+        align-items: flex-start;
+        overflow-x: hidden; /* Ensures no horizontal scroll on mobile */
     }
-}
 
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    header a, header span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+
+}

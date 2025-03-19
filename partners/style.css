@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    background-color: black;
+    background-color: #202020;
     color: white;
     display: flex;
     flex-direction: column;
