@@ -1,5 +1,8 @@
 @import url(/fonts/forza.css);
-
+::selection{
+    background: #FF5000;
+    color: white;
+}
 * {
     margin: 0;
     box-sizing: border-box;
@@ -295,6 +298,8 @@ a:hover{
 .rankings-promo {
     margin-top: 144px; /* Ensure 144px gap from the previous section */
 }
+
+
 
 @media (max-width: 768px) {
     header {

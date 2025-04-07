@@ -1,5 +1,8 @@
 @import url(/fonts/forza.css);
-
+::selection{
+    background: #FF5000;
+    color: white;
+}
 body {
     margin: 0;
     background-color: rgb(32, 32, 32);
@@ -161,29 +164,57 @@ main div {
 
 /*  */
 
+/* Updated alignment for .feat section */
 .feat {
+    display: flex; /* Ensure flexbox is applied */
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     background-image: url(/imgs/people-bg.jpg);
     background-position: center;
     background-size: cover;
     margin-top: 0;
     padding-bottom: 2em;
-    border-bottom: #FF5000 dotted 0.5em;
+    border-bottom: #FF5000 solid 0.5em;
     max-width: 100%; /* Prevents overflow */
     margin: 0 auto; /* Centers the element */
 }
 
+/* Adjusted layout for rows inside .users */
 .users {
     display: flex;
+    flex-direction: column; /* Keep rows stacked */
+    align-items: center; /* Center rows horizontally */
+    gap: 20px; /* Add spacing between rows */
+    margin-top:0em;
+}
+
+.rowOne, .rowTwo, .rowThree {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: center; /* Center items in each row */
+    gap: 20px; /* Add spacing between items */
+    width: 100%; /* Ensure rows take full width */
     flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 700px;
-    margin-top: 0;
+}
+
+.axl{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+width: 100%;
+gap: 20px;
+margin-top: 0em;
 }
 
 .user-profile {
-    margin: 0 10px;
-    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content within each profile */
+    text-align: center; /* Ensure text is centered */
+    max-width: 200px; /* Limit profile width for consistency */
+    margin: 10px; /* Add spacing around profiles */
 }
 
 .user-profile > img {
@@ -216,6 +247,27 @@ main div {
     font-size: 0.875em;
 }
 
+@media (max-width: 768px) {
+    .users {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row on smaller screens */
+    }
+
+    .rowOne, .rowTwo, .rowThree {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        justify-content: space-between; /* Maintain spacing */
+    }
+
+    .user-profile {
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .users {
+        grid-template-columns: 1fr; /* One item per row on very small screens */
+    }
+}
+
 /*  */
 
 footer {
@@ -224,6 +276,7 @@ footer {
     padding: 3em 0;
     background-color: black;
     color: white;
+    
 }
 
 .footer-links {

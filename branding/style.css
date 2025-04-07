@@ -1,5 +1,10 @@
 @import url(/fonts/forza.css);
 
+::selection{
+    background: #FF5000;
+    color: white;
+}
+
 body {
     margin: 0;
     background-color: black;
@@ -213,10 +218,72 @@ h1, h2 {
     }
 }
 
+footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 3em 0;
+    background-color: black;
+    color: white;
+    border-top: #FF5000 3px solid;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2em;
+}
+
+.footer-links div {
+    text-align: left;
+}
+
+.footer-links h3 {
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    color: #FF5000;
+}
+
+.footer-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 0.2em 0;
+    transition: color 0.3s ease;
+}
+
+
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+footer p {
+    width: 90%;
+    margin: auto;
+    margin-top: 2em;
+    line-height: 1.5;
+}
+
 section{
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
+}
+
+.brandingNotice {
+    font-size: 1.2em;
+    color: #FF5000;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #FF5000;
+    border-radius: 10px;
+    background-color: black;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
 }
 
 @keyframes fadeIn {
