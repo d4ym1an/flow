@@ -1,8 +1,8 @@
 # Flow Website
-[SITE HERE](https://daymian-flow.netlify.app/)
 ![Flow Logo](imgs/flow.jpg)
 
 Welcome to the official website of **Flow**, the leading competitive clan in **Kirka.io**! Our site showcases our members, achievements, and partnerships, as well as providing access to our social media and featured content.
+[SITE HERE](https://daymian-flow.netlify.app/)
 
 ## About Us
 
