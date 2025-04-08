@@ -1,4 +1,4 @@
-# Flow Website
+[# Flow Website](https://daymian-flow.netlify.app/)
 
 ![Flow Logo](imgs/flow.jpg)
 
@@ -27,12 +27,6 @@ Stay connected with us on our social platforms:
 ## Disclaimer
 
 Flow is not endorsed by Kirka (Kirka.io). The views and opinions expressed by Flow members do not represent those of Kirka or any individuals involved in its production or management, nor do they reflect the collective position of Flow or its members.
-
-## How to Use
-
-1. Clone this repository to your local machine.
-2. Open `index.html` in your browser to explore the site.
-3. Customize the content as needed to reflect updates or new achievements.
 
 ---
 
