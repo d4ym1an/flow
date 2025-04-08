@@ -321,12 +321,17 @@ footer p {
         flex-direction: column;
         align-items: flex-start;
         overflow-x: hidden; /* Ensures no horizontal scroll on mobile */
+        margin: 0; /* Removes any unintended margin */
+        padding: 0; /* Removes any unintended padding */
+        width: 100%; /* Ensures full width on mobile */
+        box-sizing: border-box; /* Includes padding in width calculation */
     }
 
     header {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
+        box-sizing: border-box; /* Prevents overflow */
     }
 
     header a, header span {
@@ -334,38 +339,17 @@ footer p {
         margin-bottom: 10px;
     }
 
-    .gallery {
-        width: 100%;
-    }
-
-    .member-list {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .vip-section {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .feat, .abt {
+    .gallery, .member-list, .vip-section, .feat, .abt {
         width: 100%; /* Ensures full width on mobile */
         padding: 0 1em; /* Adds padding to prevent content touching edges */
         box-sizing: border-box; /* Includes padding in width calculation */
     }
 
-    iframe {
+    iframe, #videoPlayer {
         width: 100%;
         height: auto;
         max-width: 100%; /* Prevents overflow */
         margin: 0 auto; /* Centers the iframe */
         box-sizing: border-box;
-    }
-
-    #videoPlayer {
-        width: 100%;
-        height: auto;
     }
 }

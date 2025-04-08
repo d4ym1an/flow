@@ -5,6 +5,12 @@
 }
 *{
     margin: 0;
+    box-sizing: border-box; /* Ensure all elements respect width */
+}
+
+html, body {
+    width: 100%; /* Prevent overflow */
+    overflow-x: hidden; /* Disable horizontal scrolling */
 }
 
 body{
@@ -279,19 +285,27 @@ footer p {
 }
 
 @media (max-width: 425px) {
+    body {
+        flex-direction: column;
+        align-items: flex-start;
+        overflow-x: hidden; /* Ensures no horizontal scroll on mobile */
+        margin: 0; /* Removes any unintended margin */
+        padding: 0; /* Removes any unintended padding */
+        width: 100%; /* Ensures full width on mobile */
+        box-sizing: border-box; /* Includes padding in width calculation */
+        
+    }
+
     header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 1em;
-    }
-
-    header img {
-        width: 40px;
+        width: 100%;
+        box-sizing: border-box; /* Prevents overflow */
     }
 
     header a, header span {
-        font-size: 1em;
-        padding: 0.5em;
+        display: block;
+        margin-bottom: 10px;
     }
 
     .content {
@@ -302,6 +316,7 @@ footer p {
     .tournaments-list, .roster {
         margin: 0;
         width: 100%;
+        border-right: none;
     }
 
     .region-text {

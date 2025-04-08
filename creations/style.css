@@ -142,6 +142,27 @@ a:hover, span:hover {
     font-size: 1em;
 }
 
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 2em;
+}
+
+.item{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    h2{
+        font-size: 1.5em;
+        margin: 0.5em 0;
+    }
+}
+
+.item:hover{
+    transform: scale(1.05);
+}
+
 footer {
     text-align: center;
     font-size: 12px;
@@ -205,6 +226,8 @@ footer p {
         flex-direction: column;
         align-items: flex-start;
         overflow-x: hidden; /* Ensures no horizontal scroll on mobile */
+        width: 100vw; /* Ensures the body fits within the viewport width */
+        max-width: 426px; /* Prevents content from exceeding the viewport width */
     }
 
     header {
@@ -218,5 +241,20 @@ footer p {
         margin-bottom: 10px;
     }
 
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 20px;
+        margin: 2em auto; /* Centers the grid horizontally */
+        justify-content: center; /* Centers the grid items horizontally */
+        align-items: center; /* Centers the grid items vertically */
+    }
+
+    .item {
+        width: 10%;
+        img {
+            width: 70px;
+        }
+    }
 
 }
