@@ -355,4 +355,15 @@ footer p {
         align-items: center;
         width: 100%;
     }
+
+    .lead-txt::after, .member-txt::after {
+        content: '';
+        display: block;
+        width: 250px;
+        height: 2px;
+        background-color: white;
+        height: 2px;
+        background-color: white;
+        margin: 0.5em auto 0;
+    }
 }

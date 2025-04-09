@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    background-color: black;
+    background-color: rgb(32, 32, 32);
     color: white;
     display: flex;
     flex-direction: column;
@@ -25,6 +25,17 @@ header {
     display: flex;
     align-items: center;
     border-bottom: 7px solid #FF5000;
+    font-size: 1.2em; /* Adjust font size for better readability */
+    width: 100vw; /* Use 100% of the viewport width */
+    margin: 0; /* Remove any unintended margins */
+}
+
+header, footer {
+    position: relative; /* Ensure they are positioned relative to the viewport */
+    left: 0;
+    width: 100%; /* Use 100% of the screen width */
+    max-width: 100%; /* Prevent any unintended overflow */
+    box-sizing: border-box; /* Include padding and borders in width */
 }
 
 a {
@@ -87,7 +98,7 @@ a:hover, span:hover {
     display: none;
     position: absolute;
     background-color: black;
-    margin-top: 0.5em;
+    margin-top: 0em;
     margin-left: 0.5em;
     min-width: 10em;
     box-shadow: 0px 0.5em 1em 0px rgba(0,0,0,0.2);
@@ -171,7 +182,7 @@ h1, h2 {
 }
 
 .logo-2{
-    background: rgb(29, 29, 29);
+    background: rgb(0, 0, 0);
     width: 30%;
     display: flex;
     border-radius: 2em;
@@ -182,6 +193,13 @@ h1, h2 {
     color: white;
 }
 
+.logos img {
+    max-width: 100%; /* Ensures images do not exceed their container width */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes inline spacing issues */
+    margin: 10px auto; /* Adds vertical spacing between images */
+    border-radius: 1em; /* Adds slight rounding for consistency */
+}
 
 .download-link1 {
     display: inline-block;
@@ -220,11 +238,14 @@ h1, h2 {
 
 footer {
     text-align: center;
-    font-size: 12px;
+    font-size: 0.9em; /* Slightly reduce font size for footer */
+    line-height: 1.6; /* Improve readability */
     padding: 3em 0;
     background-color: black;
     color: white;
     border-top: #FF5000 3px solid;
+    width: 100vw; /* Use 100% of the viewport width */
+    margin: 0; /* Remove any unintended margins */
 }
 
 .footer-links {
@@ -290,6 +311,74 @@ section{
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        flex-direction: column;
+        align-items: flex-start;
+        overflow-x: hidden; /* Ensures no horizontal scroll on mobile */
+        margin: 0; /* Removes any unintended margin */
+        padding: 0; /* Removes any unintended padding */
+        width: 100%; /* Ensures full width on mobile */
+        box-sizing: border-box; /* Includes padding in width calculation */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        box-sizing: border-box; /* Prevents overflow */
+        font-size: 1em; /* Adjust header font size for smaller screens */
+    }
+
+    header a, header span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .intro{
+        font-size: 5em; /* Adjust intro font size for smaller screens */
+        line-height: 1em; /* Adjust line height for better readability */
+        margin-bottom: 20px; /* Add spacing below the intro text */
+    }
+
+    .logos {
+        flex-direction: column; /* Stack logos vertically */
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo-1, .logo-2, .logo-3 {
+        width: 80%; /* Adjust width for smaller screens */
+        margin: 10px 0; /* Add spacing between logo sections */
+    }
+
+    .logos img {
+        margin: 15px 0; /* Add more spacing between images */
+    }
+
+    .backgroundAssets {
+        flex-direction: column; /* Stack assets vertically */
+        align-items: center; /* Center align assets */
+        gap: 20px; /* Add spacing between elements */
+    }
+
+    .flowGroupPhoto, .flowMembers {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .brandingNotice{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        font-size: 0.8em; /* Adjust footer font size for smaller screens */
     }
 }
 
